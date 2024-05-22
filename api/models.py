@@ -41,11 +41,11 @@ class Experience(models.Model):
 
 
 class SocialMedia(models.Model):
-    instagram_link = models.URLField(default='#', null=True, blank=True)
-    facebook_link = models.URLField(default='#', null=True, blank=True)
-    linkedin_link = models.URLField(default='#', null=True, blank=True)
-    github_link = models.URLField(default='#', null=True, blank=True)
-    twitter_link = models.URLField(default='#', null=True, blank=True)
+    instagram_link = models.URLField(default='https://www.example.com', null=True, blank=True)
+    facebook_link = models.URLField(default='https://www.example.com', null=True, blank=True)
+    linkedin_link = models.URLField(default='https://www.example.com', null=True, blank=True)
+    github_link = models.URLField(default='https://www.example.com', null=True, blank=True)
+    twitter_link = models.URLField(default='https://www.example.com', null=True, blank=True)
     mail = models.EmailField(max_length=200, null=True, blank=True)
     contact_no = models.CharField(max_length=15, null=True, blank=True)
 
