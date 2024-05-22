@@ -46,8 +46,8 @@ class SocialMedia(models.Model):
     linkedin_link = models.URLField(default='https://www.example.com', null=True, blank=True)
     github_link = models.URLField(default='https://www.example.com', null=True, blank=True)
     twitter_link = models.URLField(default='https://www.example.com', null=True, blank=True)
-    mail = models.EmailField(max_length=200, null=True, blank=True)
-    contact_no = models.CharField(max_length=15, null=True, blank=True)
+    mail = models.EmailField(max_length=200, default='example@gmail.com', null=True, blank=True)
+    contact_no = models.CharField(max_length=15, default='9876543210', null=True, blank=True)
 
     def __str__(self):
         return self.mail
