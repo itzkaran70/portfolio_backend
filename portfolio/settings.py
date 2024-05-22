@@ -22,15 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.environ.get("SECRET_KEY")
-SECRET_KEY = 'django-insecure-v83+pbz&%gggy*mnoj0e!a+^wnj&e%tb*us%er2%84f35#p7%@'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECRET_KEY = 'django-insecure-v83+pbz&%gggy*mnoj0e!a+^wnj&e%tb*us%er2%84f35#p7%@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get("DEBUG", "False") == "True"
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+# DEBUG = True
 
-# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -97,8 +97,8 @@ database_url = os.environ.get("DATABASE_URL")
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        # default=database_url,
-        default='postgres://portfolio_db_f6e3_user:3Ce0Pjz549krubzXvjGs7MBGdLX92Tah@dpg-cp6o3ruv3ddc73fnfb00-a.oregon-postgres.render.com/portfolio_db_f6e3',
+        default=database_url,
+        # default='postgres://portfolio_db_f6e3_user:3Ce0Pjz549krubzXvjGs7MBGdLX92Tah@dpg-cp6o3ruv3ddc73fnfb00-a.oregon-postgres.render.com/portfolio_db_f6e3',
         conn_max_age=600
     )
 }
@@ -168,12 +168,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Vite default port
-    "http://localhost:5174",  # Vite default port
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",  # Vite default port
+#     "http://localhost:5174",  # Vite default port
+# ]
 
-# CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS").split(" ")
+CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS").split(" ")
 
 # ckeditor files Start here
 
